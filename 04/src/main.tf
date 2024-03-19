@@ -6,7 +6,7 @@ module "vpc_dev" {
 }
 
 module "marketing-vm" {
-  source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=main"
+  source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=282797c08889fb2ab78c1ac69fcd435453df860d"
   env_name       = "develop"
   network_id     = module.vpc_dev.vpc_network.id
   subnet_zones   = [var.default_zone]
@@ -14,7 +14,6 @@ module "marketing-vm" {
   instance_name  = "web"
   instance_count = 1
   image_family   = var.image_family
-  public_ip      = true
   labels = {
     project = "marketing"
   }
@@ -25,7 +24,7 @@ module "marketing-vm" {
 }
 
 module "analytics-vm" {
-  source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=main"
+  source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=282797c08889fb2ab78c1ac69fcd435453df860d"
   env_name       = "stage"
   network_id     = module.vpc_dev.vpc_network.id
   subnet_zones   = [var.default_zone]
@@ -33,7 +32,6 @@ module "analytics-vm" {
   instance_name  = "web-stage"
   instance_count = 1
   image_family   = var.image_family
-  public_ip      = true
   labels = {
     project = "analytics"
   }
