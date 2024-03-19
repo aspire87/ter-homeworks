@@ -38,14 +38,14 @@ Checkov
 
 ### Задание 3
 
-Ссылка на PR [](https://github.com/aspire87/ter-homeworks/pull/2)
+Ссылка на  [PR](https://github.com/aspire87/ter-homeworks/pull/2)
 
 
 ### Задание 4 
 
 Листинг переменных  из  файла ```variables.tf```
 <details>
-  <summary></summary>
+  <summary>variables.tf</summary>
 
 ```bash
 ### TASK4
